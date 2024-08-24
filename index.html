@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+<script type="module">
+    import './node_modules/joypad.js/dist/joypad.min.js';
+
+    joypad.on('button_press', (e) => {
+        const { buttonName } = e.detail;
+
+        console.log(`${buttonName} was pressed!`);
+    });
+    joypad.on('axis_move', e => {
+        console.log(e.detail);
+    });
+</script>
+</body>
+</html>
